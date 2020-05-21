@@ -21,11 +21,9 @@ public class DeleteAd extends SimpleTagSupport {
 		
 		String errorMessage = null;
 		// Извлечь из контекста приложения общий список объявлений
-		AdList adList = (AdList) getJspContext().getAttribute("ads",
-				PageContext.APPLICATION_SCOPE);
+		AdList adList = (AdList) getJspContext().getAttribute("ads", PageContext.APPLICATION_SCOPE);
 		// Извлечь из сессии описание текущего пользователя
-		User currentUser = (User) getJspContext().getAttribute("authUser",
-				PageContext.SESSION_SCOPE);
+		User currentUser = (User) getJspContext().getAttribute("authUser", PageContext.SESSION_SCOPE);
 		if (currentUser == null || (ad.getId() > 0 && ad.getAuthorId() != currentUser.getId())) {
 			errorMessage = "Вы пытаетесь изменить сообщение, к которому не обладаете правами доступа!";
 		}
@@ -34,7 +32,6 @@ public class DeleteAd extends SimpleTagSupport {
 			AdListHelper.saveAdList(adList);
 		}
 		// Сохранить описание ошибки (текст или null) в сессии
-		getJspContext().setAttribute("errorMessage", errorMessage,
-				PageContext.SESSION_SCOPE);
+		getJspContext().setAttribute("errorMessage", errorMessage, PageContext.SESSION_SCOPE);
 	}
 }
