@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/entity/Ad.java=UTF-8
+encoding//src/entity/AdList.java=UTF-8
 encoding//src/entity/ListOfIdentifiables.java=UTF-8
 encoding//src/entity/User.java=UTF-8
 encoding//src/entity/UserList.java=UTF-8
