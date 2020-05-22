@@ -12,7 +12,7 @@
 	<my:layout1Column>
 		<h1>Регистрация нового пользователя</h1>
 		<my:errorMessage />
-		<form id="mform" action="/nice/doRegister.jsp" method="post">
+		<form id="mform" action="/Ad/doRegister.jsp" method="post">
 			<table>
 				<%-- body="0" cellspacing="0" cellpadding="10">--%>
 				<tr>

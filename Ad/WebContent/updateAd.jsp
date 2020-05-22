@@ -41,7 +41,7 @@
 		<%-- Вставить тег отображения сообщения об ошибке --%>
 		<my:errorMessage />
 		<%-- Отобразить форму редактирования объявления (с подстановкой переданных данных) --%>
-		<form action="/nice/doUpdateAd.jsp" method="post">
+		<form action="/Ad/doUpdateAd.jsp" method="post">
 			<%-- Если переданный параметр id больше нуля (т.е. мы редактируем объявление), то сохранить его в невидимом поле --%>
 			<c:if test="${param.id>0}">
 				<input type="hidden" name="id" value="${param.id}">
